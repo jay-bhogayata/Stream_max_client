@@ -1,113 +1,207 @@
-import Image from 'next/image'
+"use client";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className=" bg-slate-700 h-screen flex flex-col items-center">
+      <div className="cursor-pointer">
+        <div className="bg-transparent">
+          <section className="relative h-auto flex items-center flex-col w-full  z-10 justify-center bg-transparent">
+            <div className=" space-y-2 flex flex-col items-center  text-white absolute z-20">
+              <div className="text-3xl md:text-6xl  font-bold ">
+                Unlimited movies, TV{" "}
+              </div>
+              <div className="text-4xl font-bold"> shows and more.</div>
+              <div className="text-xl hidden  sm:inline-block">
+                Watch anywhere. Cancel anytime.
+              </div>
+              <div className="text-lg px-8 hidden pb-40 sm:inline-block">
+                Ready to watch? Enter your email to create or restart your
+                membership.
+              </div>
+            </div>
+            <div className=" relative h-full  ">
+              <div className="absolute w-full  h-60 bg-gradient-to-b from-black   ">
+                <div className="flex  items-center py-4 px-20 w-full justify-between">
+                  <div className="w-40 text-red-500">
+                    <span
+                      className=" nfLogo"
+                      data-uia="netflix-header-svg-logo-noclick"
+                    ></span>
+                  </div>
+                  <div className="flex space-x-6  sm:inline-flex">
+                    <div className=""></div>
+                  </div>
+                </div>
+              </div>
+              <div className="h-full bg-gradient-to-t absolute from-stone-900 text-white bottom-0 w-full">
+                {" "}
+              </div>
+              <img
+                className=" flex w-full  object-fit "
+                src="https://assets.nflxext.com/ffe/siteui/vlv3/c43f3cc0-6f02-4b8a-9470-7b1732eb937d/7ae82418-beea-4868-8594-dddd284dc46c/IN-en-20210315-popsignuptwoweeks-perspective_alpha_website_small.jpg"
+              />
+            </div>
+          </section>
+          <section className=" border-t-8   h-full flex-col sm:flex-row  flex  border-gray-700     w-full z-50 text-white   bg-black">
+            <div className="flex my-auto  h-full justify-center   items-center  flex-col sm:w-1/2 w-full p-12">
+              <div className="text-4xl text-left  w-full font-bold">
+                Enjoy on your TV.
+              </div>
+              <div className="text-xl">
+                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
+                Blu-ray players and more.
+              </div>
+            </div>
+            <div className="sm:w-1/2 w-full bg-black">
+              <div className="relative max-w-2xl  my-auto w-full my-auto  overflow-hidden">
+                <img
+                  alt=""
+                  className="absolute  right-0 z-10"
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+                />
+                <video
+                  className=" p-20 w-full"
+                  autoPlay=""
+                  playsInline=""
+                  muted=""
+                  loop=""
+                >
+                  <source
+                    src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <section className="flex-col sm:flex-row py-10  flex  border-gray-700 border-t-8  min-half-screen  w-full z-50 text-white   bg-black">
+          <div className="flex my-auto  justify-center   items-center  flex-col sm:w-1/2 w-full ">
+            <div className="relative ">
+              <div className="flex justify-center w-full">
+                <div className="absolute w-full  justify-between  max-w-sm flex bottom-0  bg-black border border-gray-500 p-4">
+                  <div className="">
+                    <img
+                      className="h-16"
+                      src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"
+                    />
+                  </div>
+                  <div className="our-story-card-animation-text">
+                    <div id="" className="text-0" data-uia="">
+                      Stranger Things
+                    </div>
+                    <div id="" className="text-1" data-uia="">
+                      Downloading...
+                    </div>
+                  </div>
+                  <div className="">
+                    <svg
+                      className="text-white w-8"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" />
+            </div>
+          </div>
+          <div className="flex my-auto  h-full justify-center   items-center  flex-col sm:w-1/2 w-full p-12">
+            <div className="text-4xl text-left  w-full font-bold">
+              Watch everywhere.
+            </div>
+            <div className="text-xl">
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV. .
+            </div>
+          </div>
+        </section>
+        <section className="  flex  flex-col sm:flex-row  border-gray-700 border-t-8  min-half-screen  w-full z-50 text-white   bg-black">
+          <div className="flex my-auto  h-full justify-center   items-center  flex-col sm:w-1/2 w-full p-12">
+            <div className="text-4xl text-left  w-full font-bold">
+              Watch everywhere.
+            </div>
+            <div className="text-xl">
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV. .
+            </div>
+          </div>
+          <div className="sm:w-1/2 w-full bg-black">
+            <div className="relative max-w-2xl  my-auto w-full my-auto  overflow-hidden">
+              <img
+                alt=""
+                className="absolute  right-0 z-10"
+                src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
+              />
+              <video
+                className=" p-20 w-full"
+                autoPlay=""
+                playsInline=""
+                muted=""
+                loop=""
+              >
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </section>
+        <section className=" border-gray-700 border-b-8 border-t-8 bg-black text-center  text-white"></section>
+        {/*  */}
+        <footer className="w-full bg-black text-gray-400">
+          <div className="w-full p-10 space-y-2">
+            <div className="pb-5">Questions? Call 000-800-040-1843</div>
+            <div className="flex flex-wrap w-full flex my-4">
+              <div className="sm:w-1/4 w-1/2">
+                <ul className="space-y-6">
+                  <li>FAQ </li>
+                  <li>Investor Relations</li>
+                  <li>Privacy</li>
+                  <li>Speed Test</li>
+                </ul>
+              </div>
+              <div className="sm:w-1/4 w-1/2">
+                <ul className="space-y-6">
+                  <li className="">Help Centre </li>
+                  <li className=""> Jobs</li>
+                  <li className=""> Cookie Preferences</li>
+                  <li className=""> Legal Notices</li>
+                </ul>
+              </div>
+              <div className="sm:w-1/4 w-1/2">
+                <ul className="space-y-6">
+                  <li className="">Account </li>
+                  <li className="">Ways to Watch </li>
+                  <li className="">Corporate Information </li>
+                  <li className="">StreamMax Originals </li>
+                </ul>
+              </div>
+              <div className="sm:w-1/4 w-1/2">
+                <ul className="space-y-6">
+                  <li className=""> Media Centre</li>
+                  <li className="">Terms of Use </li>
+                  <li className="">Contact Us </li>
+                </ul>
+              </div>
+            </div>
+            <div className=" space-y-4 pt-3">
+              <div className="">StreamMax India</div>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
-  )
+  );
 }
